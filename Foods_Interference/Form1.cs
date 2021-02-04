@@ -83,7 +83,7 @@ namespace Foods_Interference
             while (FFE_File.Peek() >= 0)
             {
                 Line = FFE_File.ReadLine().ToString();
-                string strArray = FFE_File.split(',');
+                string strArray = FFE_File.ToString().Split(',');
                 int i = FindIndex(V, strArray[0]);
                 int j = FindIndex(V, strArray[1]);
                 if (i == -1 || j == -1)
@@ -104,7 +104,7 @@ namespace Foods_Interference
         {
             StreamReader IP_File = new StreamReader("Address");
             string strArray;
-            while(IP_File.Peek() >= 0)
+            while (IP_File.Peek() >= 0)
             {
                 strArray = IP_File.ReadLine().ToString().split(',');
                 HashTable.Add(strArray[0], Int32.Parse(strArray[1]));
